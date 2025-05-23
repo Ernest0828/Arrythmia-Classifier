@@ -21,7 +21,7 @@ Please ensure that you have one folder created for this entire project, as it wi
 ### 2. Setting up a GPU in your device
 
 Follow the steps below if your device's graphic processing unit (GPU) has not been configured yet, or skip it if your device doesn't have a GPU.
-A. Install Nvidia GPU Driver
+**A. Install Nvidia GPU Driver**
 
 Link to download Nvidia Driver: https://www.nvidia.com/en-us/drivers/
 Select your GPU model and operating system.
@@ -30,29 +30,34 @@ Restart your device after the driver is installed.
 To validate if your dirver has been successfully installed, open Command Prompt and run: nvidia-smi
 This will show information about your GPU, memory usage, and other details. The image below shows an example on my device (my devices GPU is GTX1650).
 ![image](https://github.com/user-attachments/assets/633c4e9d-fa76-4200-920d-2cfad90e9c04)
-B. Install CUDA Toolkit
+
+**B. Install CUDA Toolkit**
 
 CUDA Installation: https://developer.nvidia.com/cuda-downloads
 Select your operating system and the appropriate version of CUDA (I used CUDA 11.8).
 Download the installer and run it
 Follow the installation instructions, and ensure you choose the default installation (includes the necessary libraries and compiler)
-C. Install Conda and Create a Virtual Environment
+
+**C. Install Conda and Create a Virtual Environment**
 
 Link to download Anaconda: https://www.anaconda.com/download (skip this step if you already have Anaconda installed)
 Install Anaconda by following the instructions on the website
 Once it is downloaded or you already ahve it, proceed to open Anaconda Prompt and create a new environment for PyTorch: conda create --name test(test is the name of the virtual envrironment) conda activate test
 This creates a virtual environment called 'test' and activates it
-D. Install PyTorch with CUDA Support
+
+**D. Install PyTorch with CUDA Support**
 
 After activating the virtual environment, install PyTorch with CUDA support
 Run the following prompt in the Anaconda Prompt (while the virtual environment is activated): conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch
 This will install PyTorch, TorchVision and CUDA 11.8 support
 You can verify its installation to check if CUDA is enabled in PyTorch, its output should be like the image below
 ![image](https://github.com/user-attachments/assets/a7d16fa5-cac6-49ed-8bc1-0fc7003f3950)
-E. Install Other required libraries within the virtual environment
+
+**E. Install Other required libraries within the virtual environment**
 
 To install other libraries, you can install them using 'pip' within the virtual environment pip install pandas numpy matplotlib scikit-learn seaborn
-F. Set up Jupyter Notebook with the Correct Kernel
+
+**F. Set up Jupyter Notebook with the Correct Kernel**
 
 This project will be run on Jupyter Notebook excpet for the web application, ensure that this is installed
 Install ipykernel in the virtual environment: pip install ipykernel
